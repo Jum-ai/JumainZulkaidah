@@ -1,0 +1,348 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+header.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  z-index: 999;
+ }
+nav{
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffff;
+  padding: 5px;
+  border-bottom: 3px solid #003366;
+}
+nav a{
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #FF9C33;
+}
+nav ul{
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+nav li{
+  list-style-type: none;
+}
+.navbar a:hover {
+  color: #003366;
+}
+.active {
+  background-color: #003366;
+}
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #003366;
+  text-align: center;
+  font-weight: bold;
+}
+.logo img{
+  width: 75px;
+  height: 75px;
+  gap: 0 30px;
+}
+.jumbotron{
+  display: flex;
+  align-items: center;
+  background-image: url('../image/profiluho.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
+.jumbotron::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background: rgba(1,1,3,0.7);
+}
+.jumbotron .content-jumbotron{
+  color: #ffff;
+  z-index: 2;
+  padding: 2rem 18%;
+  text-align: center;
+}
+.jumbotron .content-jumbotron h1{
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+  line-height: 1.2;
+  color: #FF9C33;
+}.jumbotron .content-jumbotron p{
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.lokasi{
+  font-size: 12px;
+  display: flex;
+  gap: 0 20px;
+  justify-content: space-between;
+}
+.lokasi a{
+  padding-top: 17px;
+}
+.content-jumbotron aside {
+  position: fixed;
+  inset-block-end: 30vh;
+  inset-inline-start: 0;
+}
+.content-jumbotron aside .follow-me{
+  background-color: #003366;
+  padding: 1rem 2rem 1rem 1rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 3s;
+}
+aside .follow-me img{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 30%;
+}
+aside .follow-me button {
+  width: 5.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  
+}
+.hidden{
+  display: none;
+}
+aside .follow-me .social-media ul{
+  list-style-position: inside;
+  padding-left: 0;
+}
+aside .follow-me .social-media li {
+  list-style-type: none;
+}aside .follow-me .social-media li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  transition: all .1s ease-in-out;
+}
+aside .follow-me .social-media li a:hover {
+  color: #89b0d9;
+}
+#content{
+  flex: 5;
+}
+.tentang {
+  width: 100%;
+  min-height: 100vh;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 1.2rem;
+  margin-top: 20px;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem 0;
+}
+.konten-tentang{
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+}
+.img-tentang {
+  width: 48%;
+  height: 300px;
+}
+.img-tentang img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.teks-tentang {
+  max-width: 48%;
+}
+.teks-tentang p {
+  font-weight: 500;
+}
+.teks-akademik{
+  max-width: 600px;
+  padding-left: 100px;
+}
+.teks-akademik p{
+  font-weight: 700;
+}
+.konten-galeri{
+  margin: 50px 0;
+  height: 500px;
+  overflow: auto;
+}
+.img-galeri {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+.konten-galeri a{
+  cursor: pointer;
+}
+.konten-galeri img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #eeee;
+  box-shadow: 1px 2px 3px #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.konten-galeri img:hover{
+  height: 210px;
+  width: 105%;
+  opacity: .40;
+  transform: scale(1);
+  transition: all .6s ease;
+}
+.wrapper{
+  margin: auto;
+  border: 1px solid;
+  border-radius: 10px;
+  background: #003366;
+  width: 70%;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  
+}
+form, input, textarea, button a{
+  font-family: inherit;
+  font-weight: bold;
+  font-size: initial;
+}
+.form-grup label{
+  display: block;
+  margin: 2rem 0 0.5rem 0;
+}
+.form-grup input[type="text"], .form-grup input[type="email"],.form-grup textarea {
+  width: 100%;
+  padding: 1rem 0.8rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 10px;
+  outline: 0;
+  transition: border 0.15s;
+}
+.form-grup input[type="text"], .form-grup input[type="email"] {
+  height: 3rem;
+}
+.form-grup textarea {
+  resize: vertical;
+}
+.form-grup button {
+  margin-top: 1rem;
+  width: 5.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+}
+.form-grup button a {
+  text-decoration: none;
+  color: black;
+
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+  .jumbotron .content-jumbotron h1{
+    font-size: 2.3em;
+  }
+  .konten-tentang{
+    display: flex;
+    flex-direction: column;
+  }.img-tentang {
+    width: 350px;
+    height: 200px;
+    margin: auto;
+  }
+  .teks-tentang {
+    max-width: 80%;
+  }
+  .img-galeri {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 7vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav{
+    flex-direction: column;
+    height: 100px;
+    justify-content: unset;
+  }.logo img{
+    width: 40px;
+    height: 40px;
+  }
+  nav ul {
+    justify-content: center;
+    padding-inline: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: .5rem;
+  } header.navbar-container {
+    flex-direction: column;
+  }
+ 
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: .5rem;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+  .jumbotron .content-jumbotron h1{
+    font-size: 1.5em;
+  }.jumbotron .content-jumbotron p{
+    font-size: 1em;
+  }
+  .konten-tentang{
+    display: flex;
+    gap: 1rem;
+  }
+  .img-tentang {
+    width: 80%;
+    margin: auto;
+  }
+  .teks-tentang {
+    max-width: 80%;
+  }
+  .teks-akademik{
+    padding: 0;
+  }
+}
